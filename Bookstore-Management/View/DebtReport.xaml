@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="Bookstore_Management.View.DebtReport"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Bookstore_Management.View"
+             mc:Ignorable="d" 
+             Background="white"
+             d:DesignHeight="555" d:DesignWidth="1004">
+    <Grid>
+        <Border VerticalAlignment="Top" Margin ="0 100 0 0" Background="White" Height="50" Width="450" Panel.ZIndex="1">
+            <TextBlock FontSize="45" HorizontalAlignment="Center" FontFamily="times new roman" Text="BÁO CÁO CÔNG NỢ" />
+        </Border>
+
+
+        <Border Margin ="0 -50 0 0" Height="250" Width="650" BorderThickness="1.5" BorderBrush="Black" >
+            <StackPanel VerticalAlignment="center">
+                <!-- ô nhập tháng -->
+                <Border Style="{StaticResource input_border1}" Margin="0 30 0 0" Width="550">
+                    <ComboBox FontSize="18"
+                        BorderThickness="0"
+                        DockPanel.Dock="Left"
+                        Margin="18,-2,16,-2"
+                        Width="Auto"
+                        IsReadOnly="True" 
+                        IsEditable="True"
+                        Height="30"
+                        Foreground="Gray"
+                        Text="-- Nhập tháng --"/>
+                </Border>
+
+                <!-- nút lập hóa đơn và nút xuất excel-->
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Border Margin="0 20 0 0" Style="{StaticResource button_border}">
+                        <Button
+                        Style="{StaticResource button_button}"
+                        Content="Lập Hóa Đơn" />
+                    </Border>
+                    <Border Margin="10 20 0 0" Style="{StaticResource button_border}">
+                        <Button
+                        Style="{StaticResource button_button}"
+                        Content="Xuất Excel" />
+                    </Border>
+                </StackPanel>
+
+            </StackPanel>
+
+        </Border>
+        <Image HorizontalAlignment="Right" Margin="0 120 0 0 " Height="430" Width="430" Source="/Photo/bao cao cong no.png" Panel.ZIndex="-1" Opacity="0.5"/>
+    </Grid>
+</UserControl>
