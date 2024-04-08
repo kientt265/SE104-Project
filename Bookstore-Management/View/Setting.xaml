@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="Bookstore_Management.View.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Bookstore_Management.View"
+             mc:Ignorable="d" 
+             Background="white"
+             d:DesignHeight="555" d:DesignWidth="1004">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="350" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Margin="0 30 0 0" VerticalAlignment="Center" FontSize="38" HorizontalAlignment="Center" FontFamily="times new roman" Text="CÀI ĐẶT QUY ĐỊNH" />
+        <Border Grid.Row="0" VerticalAlignment="Bottom" Background="Black" Height="2" Width="750"/>
+
+        <StackPanel Grid.Row="1" Margin="120 25 100 0">
+
+            <TextBlock FontSize="20" Margin ="-20 0 0 20" Text="Các quy định: " FontWeight="Bold" />
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="18" Margin ="0 0 0 15" Text="Số lương nhập ít nhất: "/>
+                <Border Style="{StaticResource input_border2}" Width="200" Margin="50 -15 0 0">
+                    <TextBlock Style="{StaticResource inout_textblock}"/>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="18" Margin ="0 0 0 35" Text="Lượng tồn tối đa trước khi nhập: "/>
+                <Border Style="{StaticResource input_border2}" Width="200" Margin="50 -34 0 0">
+                    <TextBlock Style="{StaticResource inout_textblock}"/>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="18" Margin ="0 0 0 15" Text="Tiền nợ tối đa: "/>
+                <Border Style="{StaticResource input_border2}" Width="200" Margin="50 -15 0 0">
+                    <TextBlock Style="{StaticResource inout_textblock}"/>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="18" Margin ="0 0 0 35" Text="Lượng tồn tối thiểu sau khi bán: "/>
+                <Border Style="{StaticResource input_border2}" Width="200" Margin="50 -34 0 0">
+                    <TextBlock Style="{StaticResource inout_textblock}"/>
+                </Border>
+            </StackPanel>
+            <TextBlock FontSize="18" Margin ="0 0 0 0" Text="Số tiền thu không vượt quá số tiền khách đang nợ."/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal">
+
+            <Border Margin="0 20 0 0" Style="{StaticResource button_border}">
+                <Button
+                    Style="{StaticResource button_button}"
+                    Content="Thay đổi" />
+            </Border>
+            <Border Margin="10 20 0 0" Style="{StaticResource button_border}">
+                <Button
+                    Style="{StaticResource button_button}"
+                    Content="Đặt về mặc định" />
+            </Border>
+
+        </StackPanel>
+
+        <!-- hình nền-->
+        <Image HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 -200 0" Height="500" Width="500" Source="/Photo/settings.png" Panel.ZIndex="-1" Opacity="0.1" Grid.RowSpan="3"/>
+
+    </Grid>
+
+</UserControl>
