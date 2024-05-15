@@ -7,16 +7,28 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ErrorReport>queue</ErrorReport>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Photo\bao cao cong no.png" />
+    <None Remove="Photo\bao cao ton.jpg" />
+    <None Remove="Photo\settings.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="Photo\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Photo\bao cao cong no.png" />
+    <Resource Include="Photo\bao cao ton.jpg" />
+    <Resource Include="Photo\settings.png" />
   </ItemGroup>
 
 </Project>
